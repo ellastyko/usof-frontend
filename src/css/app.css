@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Baloo Tammudu 2";
+    src: url("../assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Regular.ttf"),
+         url("../assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Medium.ttf"),
+         url("../assets/fonts/Baloo_Tammudu_2/BalooTammudu2-SemiBold.ttf");
+}
+
+/* https://www.flaticon.com/uicons */
+:root {
+    --nav-height: 80px;   
+    --footer-height: 80px;
+
+    --main-height: calc(100vh - var(--nav-height));
+
+    --color-main: #73062C;  /* #622C53 */ 
+}
+
+
+.main {
+    width: 100%;
+    height: var(--main-height);
+}
+
+/* NOTIFIC MESSAGES */
+.message-wrapper {
+    margin-top: 50px;
+    width: 190px;
+    height: 30px;
+}
+
+.message {
+
+    width: 190px;
+    height: 30px;
+
+    font: 400 18px "Baloo Tammudu 2";  
+    
+    text-align: center;   
+    line-height: 38px;
+    
+    border-radius: 5px; 
+}
+
+.error {
+    color: red;
+    box-shadow: 0 1px 2px 0px red;
+}
+
+.success {
+    color: green;
+    box-shadow: 0 1px 2px 0px green;
+}
+
+.pagination {
+
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    list-style: none;
+    font: 400 18px "Baloo Tammudu 2";  
+    text-decoration: none;  
+}
+.pagination a { text-decoration: none; color: #551A8B; }

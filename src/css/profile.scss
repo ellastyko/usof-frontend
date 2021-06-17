@@ -1,0 +1,108 @@
+
+
+.profile-wrapper {
+
+    width: 100%;
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .profile {
+
+        width: 80%;
+        min-width: 400px;
+        max-width: 600px;
+    
+        margin-top: 100px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .profile-image  {
+
+            font: 400 16px "Baloo Tammudu 2"; 
+            display: inherit;
+            flex-direction: inherit;
+            align-items: inherit;
+
+
+            img {
+                width: 310px;
+                height: 320px;
+            
+                margin-bottom: 10px;
+            }
+
+            label {
+
+                width: 130px;
+                height: 35px;       
+                
+                position: relative;
+
+
+                input[type='file'] {
+                    visibility: hidden;
+                }
+
+                i {
+                    position: absolute;
+                    top: 3px;
+                    right: 5px;
+                }
+            }
+            
+        }
+
+
+        .profile-data {
+
+            h3 { 
+                font: 600 20px "Baloo Tammudu 2"; 
+
+                span {
+                    font: 400 16px "Baloo Tammudu 2";  
+                }
+            }
+        }
+
+
+        .profile-actions {
+            
+            a, button {
+                display: block;
+                width: 200px;
+                height: 40px;
+            
+                
+            
+                font: 400 18px "Baloo Tammudu 2"; 
+                text-decoration: none;
+            
+                text-align: center;
+                margin-top: 50px;
+            
+                background: none;
+                outline: none;
+                border: none;
+
+                position: relative;
+            }
+
+
+            svg {
+                position: absolute;
+                right: 25px;
+                top: 6px;
+
+                line-height: 40px;  
+            }
+        }
+         
+    }
+}

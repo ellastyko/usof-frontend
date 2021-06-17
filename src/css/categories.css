@@ -1,0 +1,51 @@
+
+
+.categories-wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories {
+    
+    width: 100%;
+    min-width: 400px;
+    max-width: 1200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    color: #551A8B;
+    margin: 20px 10px;
+    width: 350px;
+    height: 120px; 
+
+    padding: 0 15px 10px 15px;
+    box-shadow: 0 1px 2px 0px var(--color-main);
+    border-radius: 15px;
+
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.category .category-title {
+
+    width: 100%;
+    
+    font: 600 28px "Baloo Tammudu 2";  
+    text-align: center;
+}
+
+.category .category-content {
+    font: 400 18px "Baloo Tammudu 2";  
+    text-align: center;
+    line-height: 28px;
+}

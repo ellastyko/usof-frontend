@@ -1,0 +1,68 @@
+
+
+.posts-wrapper {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+
+    .posts {
+        width: 50%;
+        min-width: 400px;
+        max-width: 800px;
+        height: inherit;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        a { text-decoration: none; color: #551A8B; }
+        a:first-child {
+            width: 200px;
+            height: 40px;
+        
+            position: relative;
+        
+            font: 400 18px "Baloo Tammudu 2"; 
+        
+            text-align: center;
+            margin-top: 50px;
+
+            svg {
+                line-height: 40px;
+                position: absolute;
+                right: 25px;
+                top: 6px;
+            }
+        }
+
+        .post {
+            /* MAKE ADAPTIVE */
+            
+            margin: 20px 0;
+            width: 450px;
+            height: 250px; 
+        
+            padding: 0 15px 10px 15px;
+            box-shadow: 0 1px 2px 0px var(--color-main);
+            border-radius: 15px;
+
+            .post-title {
+
+                width: 100%;
+                
+                font: 600 28px "Baloo Tammudu 2";  
+                text-align: center;
+                line-height: 50px;
+            }
+
+            .post-content {
+                font: 400 18px "Baloo Tammudu 2";  
+                text-align: justify;
+                line-height: 28px;
+            }
+        }
+    }
+}
