@@ -1,5 +1,5 @@
 
-import { Route, Switch, BrowserRouter, } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, } from 'react-router-dom';
 // style
 import './css/app.css'
 
@@ -30,26 +30,26 @@ function App() {
     <BrowserRouter>
       <Nav />
       <div className="main">
-        <Switch>
+        <Routes>
           
-          <Route exact path='/' component={ Home } />
+          <Route exact path='/' element={ <Home/> } />
           
-          <Route exact path='/login' component={ Login } />
-          <Route exact path='/register' component={ Register } />
-          <Route exact path='/reset-password' component={ ResetPassword } />
-          <Route exact path='/new-password/:token' component={ NewPassword } />
+          <Route exact path='/login' element={ <Login/> } />
+          <Route exact path='/register' element={ <Register/> } />
+          <Route exact path='/reset-password' element={ <ResetPassword/> } />
+          <Route exact path='/new-password/:token' element={ <NewPassword/> } />
           
-          <Route exact path='/posts' component={ Posts } />
-          <Route exact path='/posts/:id' component={ Post } />
-          <Route exact path='/create-post' component={ CreatePost } />
+          <Route exact path='/posts' element={ <Posts/> } />
+          <Route exact path='/posts/:id' element={ <Post/> } />
+          <Route exact path='/create-post' element={ <CreatePost/> } />
           
-          <Route exact path='/categories' component={ Categories } />
-          <Route exact path='/categories/:id/posts' component={ PostsByCategory } />
+          <Route exact path='/categories' element={ <Categories/> } />
+          <Route exact path='/categories/:id/posts' element={ <PostsByCategory/> } />
 
-          <Route exact path='/users/:id' component={ User } />
-          <Route exact path='/profile' component={ Profile } />
-          <Route path="*" component={ NotFound } />
-        </Switch>
+          <Route exact path='/users/:id' element={ <User/> } />
+          <Route exact path='/profile' element={ <Profile/> } />
+          <Route path="*" element={ <NotFound/> } />
+        </Routes>
       </div>  
     </BrowserRouter>
   );

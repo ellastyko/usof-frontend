@@ -28,7 +28,7 @@ export default class Nav extends React.Component {
                         <Link to="/posts">Posts</Link>
                         <Link to="/categories">Categories</Link>              
                         {
-                            this.state.auth == true 
+                            this.state.auth === true 
                                 ? (<Link to="/profile">Profile</Link>)                                  
                                 : (<Link to="/login">Log in</Link>)
                         }

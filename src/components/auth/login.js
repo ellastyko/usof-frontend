@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import axios from 'axios'
 import Cookies from "js-cookie"
 import {Link} from 'react-router-dom'
@@ -33,7 +33,7 @@ export default class Login extends React.Component {
         const {login, email, password} = this.state;
 
         event.preventDefault();
-        console.log('sdfsd')
+
         axios.post("http://127.0.0.1:8000/api/auth/login", {
 
             "login": login,
@@ -52,8 +52,8 @@ export default class Login extends React.Component {
                 Cookies.set('email', response.data.user.email)
                 Cookies.set('image', response.data.user.image)
                 
-
-                this.props.history.push("/profile")
+                const { history } = this.props;
+                history.push("/profile")
             }            
         })
         .catch( error =>  {

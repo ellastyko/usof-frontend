@@ -28,11 +28,11 @@ export default class CreatePost extends React.Component {
         axios.get(`http://127.0.0.1:8000/api/categories`)       
         .then(response => {
 
-            let arr = Array()
+            let arr = []
             response.data.data.forEach(element => {
                 arr.push({value: element.id, label: element.title})
             });
-            console.log(arr)
+            // console.log(arr)
             this.setState({data: arr});  
         })
         .catch(function (error) {
@@ -49,6 +49,7 @@ export default class CreatePost extends React.Component {
 
 
     handleSubmit = (event) => {
+
         event.preventDefault()
         const {title, categories, content} = this.state
         axios.post(`http://127.0.0.1:8000/api/posts`, {
@@ -83,9 +84,10 @@ export default class CreatePost extends React.Component {
         
         if (actionMeta.action === 'clear') 
             this.setState({categories: [] })
+
         else if (actionMeta.action === 'select-option' || actionMeta.action === 'remove-value') {
 
-            let arr = Array()
+            let arr = []
             newValue.forEach(elem => {
                 arr.push(elem.value)
             })

@@ -4,7 +4,6 @@ import axios from 'axios/lib/axios';
 import {ReactComponent as ReactLogoPlus} from '../assets/svg/plus.svg';
 import {ReactComponent as ReactLogoLogout} from '../assets/svg/logout.svg';
 import React from 'react';
-// import '../css/profile.css'
 import '../css/profile.scss'
 
 export default class Profile extends React.Component {
@@ -39,7 +38,6 @@ export default class Profile extends React.Component {
             },{
                 headers: { 
                     'Authorization': `Bearer ` + Cookies.get('token'),
-                    // 'Content-Type': 'multipart/form-data'
                 }
             })       
             .then(response => {
@@ -64,7 +62,7 @@ export default class Profile extends React.Component {
                <div className="profile">
                     <div className="profile-image">
                         
-                        <img src={'http://localhost:8000/avatars/' + this.state.image}/>
+                        <img src={'http://localhost:8000/avatars/' + this.state.image} alt='avatar'/>
                         <label>Change avatar<input type="file" onChange={this.onLoad}/> <i onClick={this.deleteComment} className="fi-rr-download"></i></label>      
                                 
                     </div>

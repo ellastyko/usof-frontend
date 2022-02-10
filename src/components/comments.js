@@ -2,7 +2,6 @@ import React from 'react';
 import Cookies from 'js-cookie';
 import axios from 'axios/lib/axios';
 import Comment from './comment'
-// import '../css/post.scss'
 
 export default class Comments extends React.Component {
     
@@ -12,7 +11,7 @@ export default class Comments extends React.Component {
         this.state = {
             id: props.id,      
             user_comment: '',  
-            comments: Array(),
+            comments: [],
             likes: []  
         }
     }
@@ -55,7 +54,7 @@ export default class Comments extends React.Component {
             console.log(response)
             if (response.data !== undefined) {
                 
-                let updated = Array()
+                let updated = []
                 // Old comments
                 this.state.comments.forEach((e) => {
                     updated.push(e);

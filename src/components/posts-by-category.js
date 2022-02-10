@@ -1,4 +1,4 @@
-import React, {setState} from 'react';
+import React from 'react';
 import axios from 'axios/lib/axios';
 import {Link} from 'react-router-dom'
 import {ReactComponent as ReactLogoPlus} from '../assets/svg/plus.svg';
@@ -45,9 +45,9 @@ export default class PostsByCategory extends React.Component {
                                 </div>
                                 <div className="post-content">                              
                                     {
-                                        ((post.content.match( /[^\.!\?]+[\.!\?]+["']?|.+$/g )[0].length + post.content.match( /[^\.!\?]+[\.!\?]+["']?|.+$/g )[1].length) > 245) 
-                                            ? post.content.match( /[^\.!\?]+[\.!\?]+["']?|.+$/g ).slice(0, 1).join(' ')
-                                            : post.content.match( /[^\.!\?]+[\.!\?]+["']?|.+$/g ).slice(0, 2).join(' ')
+                                        // ((post.content.match( /[^\.!\?]+[\.!\?]+["']?|.+$/g )[0].length + post.content.match( /[^\.!\?]+[\.!\?]+["']?|.+$/g )[1].length) > 245) 
+                                        //     ? post.content.match( /[^\.!\?]+[\.!\?]+["']?|.+$/g ).slice(0, 1).join(' ')
+                                        //     : post.content.match( /[^\.!\?]+[\.!\?]+["']?|.+$/g ).slice(0, 2).join(' ')
                                     }
                                 </div>
                             </Link>

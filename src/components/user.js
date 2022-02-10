@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import axios from 'axios/lib/axios';
 import '../css/profile.scss'
 
@@ -40,7 +39,9 @@ export default class User extends React.Component {
                <div className="profile">
                     <div className="profile-image">
                         
-                        { this.state.data.image != null ? (<img src={'http://localhost:8000/avatars/' + this.state.data.image}/>) : (<img src="http://localhost:8000/avatars/default.jpeg"/>) }    
+                        { this.state.data.image != null 
+                                ? (<img src={'http://localhost:8000/avatars/' + this.state.data.image} alt='avatar'/>) 
+                                : (<img src="http://localhost:8000/avatars/default.jpeg" alt='avatar'/>) }    
                             
                     </div>
                     <div className="profile-data">

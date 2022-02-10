@@ -1,10 +1,9 @@
-import React, {setState} from 'react';
+import React from 'react';
 import axios from 'axios/lib/axios';
 import {Link} from 'react-router-dom'
 import Pagination from "react-js-pagination";
 import {ReactComponent as ReactLogoPlus} from '../assets/svg/plus.svg';
 import '../css/posts.scss'
-import { set } from 'js-cookie';
 
 export default class Posts extends React.Component {
     

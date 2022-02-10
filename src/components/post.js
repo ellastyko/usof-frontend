@@ -22,7 +22,6 @@ export default class Post extends React.Component {
 
     componentDidMount() {
 
-        // GET DATA ABOUT POST
         axios.get(`http://127.0.0.1:8000/api/posts/${this.state.id}`)       
         .then(response => {
             const data = response.data;
@@ -30,7 +29,6 @@ export default class Post extends React.Component {
             this.setState({rating: data.rating});
             
 
-            // console.log(this.state.post)
             axios.get(`http://127.0.0.1:8000/api/users/${this.state.post.author}`)
             .then(response => {
                 const data = response.data;
@@ -50,23 +48,21 @@ export default class Post extends React.Component {
     }
 
     handleClick = (event) => {
-        if (event.target.id == 'like' || event.target.id == 'dislike') {
+        
+        if (event.target.id === 'like' || event.target.id === 'dislike') {
 
             axios.post(`http://127.0.0.1:8000/api/posts/${this.state.id}/like`, {
                 "type": event.target.id
-            },
-            {
+            }, {
                 headers: { 
                     'Authorization': `Bearer ` + Cookies.get('token') 
                 }
             })
             .then(response => {
-                const data = response.data;
+
                 let rating = this.state.rating
 
-                event.target.id == 'like' ? this.setState({rating: rating+1}) : this.setState({rating: rating-1});
-                
-                
+                event.target.id === 'like' ? this.setState({rating: rating + 1}) : this.setState({rating: rating - 1});          
             })
             .catch(error =>  {
                 console.log(error);
